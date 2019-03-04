@@ -1,8 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
 <head>
+<title>chartMaker</title>
 <style>
-
+.container{
+	display: flex;
+}
+.fixed{
+	width: 25%;
+}
+.flex-item{
+	 flex-grow: 1;
+}
 </style>
 </head>
 <body>
@@ -10,9 +19,26 @@
 <p>
 	Tool to help generate HTML tables
 </p>
-<textarea id="myTextarea" rows="25" cols="50"></textarea>
+
+<div class="container">
+  <div class="fixed">
+  	<p>Enter step number</p>
+  	<input type="number" name="numberInput" autofocus="autofocus">
+  </div>
+  <div class="flex-item">
+  	<textarea id="myTextarea2" rows="25" cols="50"></textarea>	
+  </div>
+</div>
+<!-- <div>
+	<textarea id="numberInput" rows="1" cols="3">
+		
+	</textarea>
+</div>
+
 <button onclick="myFunction()">Go</button>
-<textarea id="myTextarea2" rows="25" cols="50"></textarea>
+<div>
+	<textarea id="myTextarea2" rows="25" cols="50"></textarea>	
+</div> -->
 <script>
 
 </script>
