@@ -13,4 +13,5 @@ Tool to help generate HTML tables
 - [x] Add to GH pages branch
 - [ ] Move JS to separate file
 - [ ] Move CSS to separate file
-- [ ] Better use of functions 
+- [ ] Better use of functions
+- [x] Test
