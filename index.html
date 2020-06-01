@@ -1,32 +1,40 @@
 <!DOCTYPE html>
-<html lang = "en">
-<head>
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <script type="text/javascript" src=js/jquery-3.5.0.js></script>
-  <script type="text/javascript" src="js/scripts.js"></script>
-  <title>chartMaker</title>
-</head>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script type="text/javascript" src=js/jquery-3.5.0.js></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <title>chartMaker</title>
+  </head>
 <body>
-<h2>Confluence HTML chartMaker - with jQuery</h2>
-<p>
-	Tool to help generate HTML tables
-</p>
-<div class="container">
-  <div class="fixed">
-  	<p>Enter step number</p>
-  	<input type="number" id="numberInput" autofocus="autofocus">
-  	<br>
-  	<br>
-  	<button id="blue" type="button" class="button buttonBlue" onclick="addColor('BLUE')">Blue</button>
-  	<button name="red" type="button" class="button buttonRed" onclick="addColor('RED')">Red</button>
-  	<button name="yellow" type="button" class="button buttonYellow" onclick="addColor('YELLOW')">Yellow</button>
-  	<button name="green" type="button" class="button buttonGreen" onclick="addColor('GREEN')">Green</button>
-  	<button type="button" onclick="endTag()">end</button>
+  <div class="container">
+    <h2>Confluence HTML chartMaker - with jQuery</h2>
+    <p>Tool to help generate HTML tables for use in Confluence</p>
+
+    <div class="row">
+      <div class="col-md-6 step-button">
+        <p>Enter step number</p>
+        <input type="number" id="numberInput">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-6 left-pane">
+        <p>Click on a color</p>
+        <button type="button" class="button buttonBlue" id="blue">Blue</button>
+        <button type="button" class="button buttonRed" id="red">Red</button>
+        <button type="button" class="button buttonYellow" id="yellow">Yellow</button>
+        <button type="button" class="button buttonGreen" id="green">Green</button>
+        <button type="button" id="end">End</button>
+      </div>
+      
+      <div class="col-md-6 right-pane">
+        <p>Insert output code here</p>
+        <textarea id="output"><table class="relative-table wrapped" style="width: 100.0%;"><colgroup> <col style="width: 5.02203%;"/><col style="width: 94.978%;"/></colgroup><tbody></textarea>
+      </div>
+    </div>
+
   </div>
-  <div class="flex-item">
-  	<textarea id="htmlOutput" rows="25" cols="50"><table class="relative-table wrapped" style="width: 100.0%;"><colgroup> <col style="width: 5.02203%;"/><col style="width: 94.978%;"/></colgroup><tbody>
-  	</textarea>	
-  </div>
-</div>
 </body>
 </html>

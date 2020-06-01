@@ -1,12 +1,12 @@
 // Business logic
 const addColor = function(color, number) {
-  
   const colors = {
     blue: '174,214,241',
     red: '245,183,177',
     yellow: '249,231,159',
     green: '171,235,198'
   };
+
   let code = `<tr> \
       <td class="wysiwyg-text-align-center" style="background-color: rgb(${colors[color]});width: 5.0%;text-align: center;vertical-align: top;"> \
         <span class="wysiwyg-color-black wysiwyg-font-size-medium">${number}</span> \
@@ -15,9 +15,8 @@ const addColor = function(color, number) {
         <p></p> \
       </td> \
     </tr>`;
-
+  
   return code
-
 }
 
 // User interface logic
@@ -27,7 +26,6 @@ $(document).ready(function() {
     event.preventDefault();
     
     let number = $("#numberInput").val()
-    
 
     let color = $(this).attr("id");
 
@@ -44,6 +42,8 @@ $(document).ready(function() {
     let presentValue = $("textarea").val()
 
     let closingTag = `</tbody></table>`
+    
     $("#output").text(presentValue + closingTag);
   });
+
 });
